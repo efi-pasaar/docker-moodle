@@ -1,0 +1,35 @@
+# install this Docker Compose file to your Docker server by using this command:
+# docker-compose up -d
+
+version: '3'
+services:
+  moodle:
+    image: bitnami/moodle:latest
+    ports:
+      - "80:8080"
+    environment:
+      - MOODLE_DATABASE_HOST=mariadb
+      - MOODLE_DATABASE_PORT_NUMBER=3306
+      - MOODLE_DATABASE_USER=moodle
+      - MOODLE_DATABASE_NAME=moodle
+      - MOODLE_DATABASE_PASSWORD=moodle_password
+      - MOODLE_USERNAME=admin
+      - MOODLE_PASSWORD=admin_password
+    volumes:
+      - moodle_data:/bitnami/moodle
+    depends_on:
+      - mariadb
+
+  mariadb:
+    image: bitnami/mariadb:latest
+    environment:
+      - MARIADB_USER=moodle
+      - MARIADB_PASSWORD=moodle_password
+      - MARIADB_DATABASE=moodle
+      - MARIADB_ROOT_PASSWORD=root_password
+    volumes:
+      - mariadb_data:/bitnami/mariadb
+
+volumes:
+  moodle_data:
+  mariadb_data:
