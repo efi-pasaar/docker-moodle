@@ -24,7 +24,6 @@ Follow these steps to get started with the Moodle Docker setup:
     docker-compose up -d
 
 4. Push your changes to your repository --> Please, remember when you update the docker-compose.yml file, you need to create a new branch and restart the containers. Let's keep main branch original,  so do not merge your branch with main. This action will also make us better understand the changes.
-    ```
 
 5. Access Moodle:
     Open your web browser and go to `http://localhost:PORT` (replace `PORT` with the port number specified in your `docker-compose.yml` file).
