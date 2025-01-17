@@ -1,1 +1,1 @@
-# docker-moodle is a platform for different kinf od testings
+# Docker Platform - Moodle H5P Content Tests
