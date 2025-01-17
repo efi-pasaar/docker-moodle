@@ -9,7 +9,7 @@ This repository contains a Docker setup for running Moodle using `docker-compose
 
 ## Getting Started
 
-PLEASE, REMEMBER WHEN YOU UPDATE THE DOCKER-COMPOSE.YML FILE, YOU NEED TO CREATE A NEW BRANCH AND RESTART THE CONTAINERS. LET'S KEEP MAIN BRANCH FOR THE ORIGINAL FILE INSTEAD SO DO NOT MERGE YOUR BRANCH TO MAIN. THIS ACTION WILL ALSO MAKE US BETTER UNDERSTAND THE CHANGES.
+Follow these steps to get started with the Moodle Docker setup:
 
 1. Clone or fork the repository:
     ```sh
@@ -22,6 +22,8 @@ PLEASE, REMEMBER WHEN YOU UPDATE THE DOCKER-COMPOSE.YML FILE, YOU NEED TO CREATE
 3. Start the Docker containers:
     ```sh
     docker-compose up -d
+
+4. Push your changes to your repository --> Please, remember when you update the docker-compose.yml file, you need to create a new branch and restart the containers. Let's keep main branch original,  so do not merge your branch with main. This action will also make us better understand the changes.
     ```
 
 4. Access Moodle:
