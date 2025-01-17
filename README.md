@@ -4,18 +4,18 @@ This repository contains a Docker setup for running Moodle using `docker-compose
 
 ## Prerequisites
 
-- Docker
+- Docker Desktop or Docker Engine for Windows or Linux
 - Docker Compose
 
 ## Getting Started
 
-1. Clone the repository:
+1. Clone or fork the repository:
     ```sh
     git clone https://github.com/yourusername/docker-moodle.git
     cd docker-moodle
     ```
 
-2. Create a `.env` file in the root directory and configure the necessary environment variables. You can use the `.env.example` file as a template.
+2. Define your environment variables in a `docker-compose.yml' file. You need to change defaults to your own values and save the file. After you have change defaults away, you can start the containers.
 
 3. Start the Docker containers:
     ```sh
@@ -32,7 +32,7 @@ The `docker-compose.yml` file includes the following services:
 - **moodle**: The Moodle application.
 - **mariadb**: The MariaDB database server.
 
-### Environment Variables
+### Environment Variables (Defaults)
 
 - `MOODLE_DB_HOST`: The database host (default: `mariadb`).
 - `MOODLE_DB_NAME`: The database name (default: `moodle`).
