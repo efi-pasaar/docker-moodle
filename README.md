@@ -9,6 +9,8 @@ This repository contains a Docker setup for running Moodle using `docker-compose
 
 ## Getting Started
 
+PLEASE, REMEMBER WHEN YOU UPDATE THE DOCKER-COMPOSE.YML FILE, YOU NEED TO CREATE A NEW BRANCH AND RESTART THE CONTAINERS. LET'S KEEP MAIN BRANCH FOR THE ORIGINAL FILE INSTEAD SO DO NOT MERGE YOUR BRANCH TO MAIN. THIS ACTION WILL ALSO MAKE US BETTER UNDERSTAND THE CHANGES.
+
 1. Clone or fork the repository:
     ```sh
     git clone https://github.com/yourusername/docker-moodle.git
