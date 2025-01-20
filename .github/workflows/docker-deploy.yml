@@ -21,9 +21,9 @@ jobs:
         run: |
           docker info
           
-      # - name: Deploy to Docker Desktop
-      #   run: |
-      #     docker-compose up -d
+      - name: Deploy to Docker Desktop
+        run: |
+          docker-compose up -d
           
       # - name: Check containers
       #   run: |
