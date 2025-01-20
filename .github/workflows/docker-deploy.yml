@@ -25,7 +25,6 @@ jobs:
         
       - name: Start Docker Desktop
         run: |
-          docker start
           docker info
           
       - name: Deploy to Docker Desktop
