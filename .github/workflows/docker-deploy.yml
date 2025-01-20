@@ -10,6 +10,10 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    services:
+      your-service:
+        extra_hosts:
+          - "host.docker.internal:host-gateway"
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
