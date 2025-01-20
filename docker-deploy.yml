@@ -2,7 +2,7 @@ name: Deploy Moodle to Docker Desktop
 
 on:
   push:
-    branches: [ main ]
+    branches: docker/modify-template-docker-compose
   pull_request:
     branches: [ main ]
   workflow_dispatch:
