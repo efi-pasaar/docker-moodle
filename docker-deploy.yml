@@ -3,9 +3,6 @@ name: Deploy Moodle to Docker Desktop
 on:
   push:
     branches: docker/modify-template-docker-compose
-  pull_request:
-    branches: [ main ]
-  workflow_dispatch:
 
 jobs:
   deploy:
@@ -23,22 +20,22 @@ jobs:
           sudo chmod +x /usr/local/bin/docker-compose
           docker compose --version
           
-      - name: Start Docker Desktop
-        run: |
-          docker info
+      # - name: Start Docker Desktop
+      #   run: |
+      #     docker info
           
-      - name: Deploy to Docker Desktop
-        run: |
-          docker compose up -d
+      # - name: Deploy to Docker Desktop
+      #   run: |
+      #     docker-compose up -d
           
-      - name: Check containers
-        run: |
-          docker ps
+      # - name: Check containers
+      #   run: |
+      #     docker ps
           
-      - name: Wait for services
-        run: |
-          sleep 30
+      # - name: Wait for services
+      #   run: |
+      #     sleep 30
           
-      - name: Check Moodle service
-        run: |
-          curl http://localhost:80 || true
+      # - name: Check Moodle service
+      #   run: |
+      #     curl http://localhost:80 || true
