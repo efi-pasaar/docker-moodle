@@ -23,6 +23,10 @@ jobs:
           sudo apt-get install -y docker-compose
           docker-compose --version
         
+      - name: Configure Docker to connect to Docker Desktop
+        run: |
+          echo "DOCKER_HOST=tcp://host.docker.internal:2375" >> $GITHUB_ENV
+          
       - name: Start Docker Desktop
         run: |
           docker info
@@ -42,4 +46,3 @@ jobs:
       - name: Check Moodle service
         run: |
           curl http://localhost:80 || true
-
