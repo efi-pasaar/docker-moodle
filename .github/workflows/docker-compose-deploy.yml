@@ -24,3 +24,11 @@ jobs:
 
       - name: Check running containers
         run: docker ps
+        
+      - name: Forward port and open browser
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y socat
+          nohup socat TCP-LISTEN:8080,fork TCP:localhost:80 &
+          sleep 5
+          xdg-open http://localhost:8080 || open http://localhost:8080
